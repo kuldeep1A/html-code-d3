@@ -19,6 +19,13 @@
 
         .text((d) => d + " USD")
         .style("font-family", "verdana")
+        .style("color", (d) => {
+            if (d < 20){
+                return "red";
+            } else {
+                return "green";
+            }
+        })
 
         // Add your code above this line
     </script>
