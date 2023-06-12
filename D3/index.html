@@ -6,28 +6,27 @@
     <!-- Include the D3 library -->
     <script src="node_modules/d3/dist/d3.min.js"></script>
   </head>
-  <body>
-    <h2></h2>
-    <script>
-        const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+<style>
+  .bar {
+    width: 250px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+  }
+</style>
+<body>
+    <div class="bar"></div>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
 
-        d3.select("body").selectAll("h2")
-        .data(dataset)
-        .enter()
-        .append("h2")
-        // Add your code below this line
+    d3.select("body").selectAll("div")
+      .data(dataset)
+      .enter()
+      .append("div")
+      // Add your code below this line
+      .addr("class", "bar");
 
-        .text((d) => d + " USD")
-        .style("font-family", "verdana")
-        .style("color", (d) => {
-            if (d < 20){
-                return "red";
-            } else {
-                return "green";
-            }
-        })
-
-        // Add your code above this line
-    </script>
-  </body>
+      // Add your code above this line
+  </script>
+</body>
 </html>
